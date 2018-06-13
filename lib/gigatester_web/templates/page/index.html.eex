@@ -1,3 +1,5 @@
+<h1>Hej</h1>
+
 <%= form_for @conn, page_path(@conn, :save), fn f -> %>
 <label>
 Save something: <%= text_input f, :hello, value: @hello %>
