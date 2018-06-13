@@ -62,4 +62,6 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 
-config :gigatester, GigatesterWeb.Endpoint, secret_key_base: "${SECRET_KEY_BASE}"
+config :gigatester, GigatesterWeb.Endpoint,
+  secret_key_base:
+    "A very secret key consists of at least 64 bites. Cookie store expects it. It must be very, very much long. Many bites."
