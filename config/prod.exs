@@ -63,11 +63,3 @@ config :logger, level: :info
 # which should be versioned separately.
 
 config :gigatester, GigatesterWeb.Endpoint, secret_key_base: "${SECRET_KEY_BASE}"
-
-# Configure your database
-config :gigatester, Gigatester.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  url: "${DATABASE_URL}",
-  database: "",
-  ssl: true,
-  pool_size: 15
