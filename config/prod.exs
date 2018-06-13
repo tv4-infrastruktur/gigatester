@@ -61,4 +61,13 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+
+config :gigatester, GigatesterWeb.Endpoint, secret_key_base: "${SECRET_KEY_BASE}"
+
+# Configure your database
+config :gigatester, Gigatester.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: "${DATABASE_URL}",
+  database: "",
+  ssl: true,
+  pool_size: 15
